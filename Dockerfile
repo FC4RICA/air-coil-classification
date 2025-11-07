@@ -1,6 +1,6 @@
-FROM  pytorch/pytorch:2.1.2-cuda11.8-cudnn8-devel
+FROM pytorch/pytorch:2.1.2-cuda11.8-cudnn8-runtime
 
-RUN apt-get update -y
+RUN apt-get update -y && apt-get install -y wget
 
 WORKDIR /code
 
